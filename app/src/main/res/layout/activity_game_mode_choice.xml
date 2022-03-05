@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#762388"
+    tools:context=".GameModeChoice">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/speedMode"
+        android:layout_width="92dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="76dp"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:focusable="true"
+        android:onClick="openGameMode"
+        app:fabCustomSize="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/SpeedModeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="90dp"
+        app:srcCompat="@drawable/nezuko" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/normalMode"
+        android:layout_width="92dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="48dp"
+        android:clickable="true"
+        android:onClick="openGameMode"
+        app:fabCustomSize="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/InfernalMode"
+        app:layout_constraintEnd_toStartOf="@+id/NormalModeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:maxImageSize="80dp"
+        app:srcCompat="@drawable/miku" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/InfernalMode"
+        android:layout_width="92dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="48dp"
+        android:clickable="true"
+        android:onClick="openGameMode"
+        app:backgroundTint="#ff80cbc4"
+        app:fabCustomSize="85dp"
+        app:layout_constraintBottom_toTopOf="@+id/speedMode"
+        app:layout_constraintEnd_toEndOf="@+id/speedMode"
+        app:layout_constraintEnd_toStartOf="@+id/InfernalModeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalMode"
+        app:layout_constraintVertical_bias="0.555"
+        app:maxImageSize="90dp"
+        app:srcCompat="@drawable/neptune" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="351dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="66dp"
+        app:layout_constraintBottom_toTopOf="@+id/NormalModeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waifuclicker" />
+
+    <TextView
+        android:id="@+id/NormalModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="101dp"
+        android:fontFamily="casual"
+        android:text="Normal"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/InfernalModeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/normalMode"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/InfernalModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="102dp"
+        android:fontFamily="casual"
+        android:text="Infernal"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/SpeedModeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/InfernalMode"
+        app:layout_constraintTop_toBottomOf="@+id/NormalModeText" />
+
+    <TextView
+        android:id="@+id/SpeedModeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="115dp"
+        android:fontFamily="casual"
+        android:text="Speed"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/speedMode"
+        app:layout_constraintTop_toBottomOf="@+id/InfernalModeText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

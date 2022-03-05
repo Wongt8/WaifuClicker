@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#762388"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/waifuLobby2"
+        android:layout_width="0dp"
+        android:layout_height="275dp"
+        android:layout_marginEnd="142dp"
+        android:background="#762388"
+        android:contentDescription="@string/app_name"
+        android:onClick="clickWaifu"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/waifuLobby1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo"
+        app:srcCompat="@drawable/miku"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/waifuLobby1"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="186dp"
+        android:background="#762388"
+        android:contentDescription="@string/app_name"
+        android:onClick="clickWaifu"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/waifuLobby2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nezuko" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="354dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waifuclicker" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="57dp"
+        android:fontFamily="casual"
+        android:onClick="choiceGameMode"
+        android:text="Play"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.463" />
+
+    <Button
+        android:id="@+id/leaderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:onClick="GoToLeaderboard"
+        android:text="leaderboard"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/resteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetLeaderboard"
+        android:text="Reste Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaderButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
