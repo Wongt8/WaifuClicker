@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/Wongt8/WaifuClicker/main/app/src/main/res/drawable/waifuclicker.png?token=GHSAT0AAAAAABQHXHMFATKIL654Y6TZKNXSYREODEA "Banner")
+![](https://cdn.discordapp.com/attachments/619217157733089284/949946237250052146/waifuclicker.png "Banner")
 
 
 # Waifu Clicker
@@ -19,7 +19,7 @@ For now 3 games mode are available.
     In this mode you can click and get points, nothing else for the moment.
 
     # Infernal Mode
-    In this mode you can click and get points but you need to click faster on the time because your point is decreasing each second in function of you current score.
+    your score will go down faster and faster, so click faster to get more points.
 
     # Speed Mode
     You have 10 seconds to click the maximum of times you can on the picture.
