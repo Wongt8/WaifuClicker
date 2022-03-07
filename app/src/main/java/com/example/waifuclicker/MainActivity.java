@@ -44,9 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else leaderboardList = LeaderboardListSingleton.getInstance();
-
-        this.removeDoubles();
-        this.shortLeaderboard();
     }
 
 
@@ -105,26 +102,5 @@ public class MainActivity extends AppCompatActivity {
         }
         }
         return sb.toString();
-    }
-
-    private void removeDoubles(){
-        for (int i = 0; i < leaderboardList.size(); i++){
-            for (int j = i+1; j < leaderboardList.size(); j++){
-                System.out.println(leaderboardList.get(i) + " " + leaderboardList.get(j) + " " + leaderboardList.get(i).equals(leaderboardList.get(j)));
-                if (leaderboardList.get(i).equals(leaderboardList.get(j))){
-                    leaderboardList.remove(j);
-                }
-            }
-        }
-    }
-
-    private void shortLeaderboard(){
-        for (int i = 0; i < leaderboardList.size(); i++){
-            if (leaderboardList.get(i).contains("\uD83C\uDFC6")){
-                String temp = leaderboardList.get(i);
-                leaderboardList.remove(i);
-                leaderboardList.add(0,temp);
-            }
-        }
     }
 }

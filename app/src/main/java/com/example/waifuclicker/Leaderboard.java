@@ -30,6 +30,10 @@ public class Leaderboard extends AppCompatActivity {
             MainActivity.leaderboardList = savedInstanceState.getStringArrayList(LEADERBOARD_KEY);
         }
 
+        this.removeDoubles();
+        this.shortLeaderboard();
+
+
         listView = findViewById(R.id.listViewId);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, MainActivity.leaderboardList);
         listView.setAdapter(arrayAdapter);
@@ -71,5 +75,25 @@ public class Leaderboard extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(LEADERBOARD_KEY, MainActivity.leaderboardList.toString());
         editor.apply();
+    }
+
+    private void removeDoubles(){
+        for (int i = 0; i < MainActivity.leaderboardList.size(); i++){
+            for (int j = i+1; j < MainActivity.leaderboardList.size(); j++){
+                if (MainActivity.leaderboardList.get(i).equals(MainActivity.leaderboardList.get(j))){
+                    MainActivity.leaderboardList.remove(j);
+                }
+            }
+        }
+    }
+
+    private void shortLeaderboard(){
+        for (int i = 0; i < MainActivity.leaderboardList.size(); i++){
+            if (MainActivity.leaderboardList.get(i).contains("\uD83C\uDFC6")){
+                String temp = MainActivity.leaderboardList.get(i);
+                MainActivity.leaderboardList.remove(i);
+                MainActivity.leaderboardList.add(0,temp);
+            }
+        }
     }
 }
