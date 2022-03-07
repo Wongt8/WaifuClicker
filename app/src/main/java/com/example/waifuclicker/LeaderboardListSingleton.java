@@ -2,7 +2,7 @@ package com.example.waifuclicker;
 
 import java.util.ArrayList;
 
-public class LeaderboardListSinglueton {
+public class LeaderboardListSingleton {
 
     private static ArrayList<String> leaderboardList = null;
 
